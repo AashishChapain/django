@@ -5,7 +5,7 @@ from django.contrib.auth import views
 from users.views import register, profile, user_update
 from django.conf import settings
 from django.conf.urls.static import static
-from blog.views import invoice
+from blog.views import invoice, test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -21,7 +21,8 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('profile/', profile, name='profile'),
     path('update/', user_update, name='update'),
-    path('invoice/', invoice)
+    path('invoice/', invoice),
+    path('test/', test)
 
 ]
 

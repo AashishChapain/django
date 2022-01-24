@@ -64,3 +64,7 @@ def about_view(request):
 def invoice(request):
     return render(request, 'invoice.html')
 
+
+def test(request):
+    return render(request, 'test.html')
+
