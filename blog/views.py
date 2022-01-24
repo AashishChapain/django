@@ -66,6 +66,6 @@ def invoice(request):
 
 
 def test_func(request):
-    key = 5
+    key = 9
     return render(request, 'test.html',{'key':key})
 

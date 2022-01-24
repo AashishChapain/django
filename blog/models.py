@@ -18,3 +18,8 @@ class post(models.Model):
     def get_absolute_url(self):
         return reverse('detail_view', kwargs={'pk':self.pk})
 
+
+class test_func(models.Model):
+    test_name = models.CharField(max_length=20)
+    test_date = models.DateTimeField(default=timezone.now)
+
