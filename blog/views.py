@@ -48,7 +48,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(DeleteView, LoginRequiredMixin, UserPassesTestMixin):
     model = post
     template_name = 'delete_post.html'
-    success_url = '/'
+    success_url = '/test/'
 
     def test_func(self):
         post = self.get_object()
@@ -66,6 +66,6 @@ def invoice(request):
 
 
 def test_func(request):
-    key = 9
+    key = 15
     return render(request, 'test.html',{'key':key})
 
