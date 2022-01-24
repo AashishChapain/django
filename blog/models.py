@@ -20,6 +20,7 @@ class post(models.Model):
 
 
 class test_func(models.Model):
-    test_name = models.CharField(max_length=20)
+    test_name = models.CharField(max_length=100)
     test_date = models.DateTimeField(default=timezone.now)
-
+    def __str__(self):
+        return self.test_name
